@@ -28,7 +28,7 @@ func (peer enetPeer) GetAddress() Address {
 }
 
 func (peer enetPeer) GetID() uint16 {
-	return (C.enet_uint16)(peer.cPeer.outgoingPeerID)
+	return uint16(peer.cPeer.outgoingPeerID)
 }
 
 func (peer enetPeer) Disconnect(data uint32) {
